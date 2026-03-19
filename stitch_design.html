@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>FromZero - AI Powered Learning</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#20c997", // Updated to Teal/Mint Green from logo
+                        "primary-dark": "#18a077",
+                        "charcoal": "#34343d", // Dark grey from logo text
+                        "background-light": "#f8fafb",
+                        "background-dark": "#0f172a",
+                    },
+                    fontFamily: {
+                        "display": ["Lexend", "sans-serif"],
+                        "sans": ["Lexend", "sans-serif"],
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "2xl": "1rem", "3xl": "1.5rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+<style type="text/tailwindcss">
+        body {
+            font-family: 'Lexend', sans-serif;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-nav {
+            @apply bg-white/80 dark:bg-background-dark/80 backdrop-blur-md border border-white/40 dark:border-gray-800/50 shadow-lg shadow-charcoal/5;
+        }
+        .step-card {
+            @apply bg-white dark:bg-gray-800/50 border border-gray-100 dark:border-gray-700/50 p-8 rounded-3xl transition-all duration-300 hover:shadow-xl hover:shadow-primary/10 hover:-translate-y-2;
+        }
+        .step-icon-container {
+            @apply size-16 rounded-2xl bg-gradient-to-br from-primary to-emerald-500 flex items-center justify-center text-white mb-6 shadow-lg shadow-primary/20;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-charcoal dark:text-gray-100 transition-colors duration-200">
+<div class="relative flex min-h-screen w-full flex-col overflow-x-hidden">
+<header class="fixed top-6 left-1/2 -translate-x-1/2 z-50 w-[90%] max-w-5xl glass-nav rounded-full">
+<div class="flex items-center justify-between px-6 py-3 w-full">
+<div class="flex items-center gap-2">
+<div class="text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-3xl font-bold">north_east</span>
+</div>
+<h2 class="text-charcoal dark:text-white text-xl font-bold tracking-tight">FromZero</h2>
+</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-sm font-semibold text-charcoal dark:text-gray-200 hover:text-primary dark:hover:text-primary transition-colors" href="#">Home</a>
+<a class="text-sm font-semibold text-charcoal dark:text-gray-200 hover:text-primary dark:hover:text-primary transition-colors" href="#">Courses</a>
+<a class="text-sm font-semibold text-charcoal dark:text-gray-200 hover:text-primary dark:hover:text-primary transition-colors" href="#">AI Tutor</a>
+<a class="text-sm font-semibold text-charcoal dark:text-gray-200 hover:text-primary dark:hover:text-primary transition-colors" href="#">Community</a>
+</nav>
+<div class="flex items-center gap-3">
+<a class="hidden sm:block text-sm font-bold text-charcoal dark:text-white mr-2" href="#">Login</a>
+<button class="bg-primary hover:bg-primary-dark text-white text-sm font-bold h-10 px-6 rounded-full transition-all shadow-lg shadow-primary/20 active:scale-95">
+                    Get Started
+                </button>
+<button class="md:hidden text-charcoal dark:text-white p-2">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</div>
+</header>
+<section class="flex flex-col justify-center pt-40 pb-16 lg:pt-52 lg:pb-24 px-6 lg:px-10">
+<div class="max-w-7xl mx-auto w-full">
+<div class="flex flex-col-reverse lg:flex-row gap-12 lg:gap-20 items-center">
+<div class="flex flex-col gap-6 lg:w-1/2">
+<div class="flex flex-col gap-4 text-left">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-primary-dark text-xs font-bold w-fit">
+<span class="relative flex h-2 w-2">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
+</span>
+                            NEW: AI TUTOR V2.0 IS LIVE
+                        </div>
+<h1 class="text-charcoal dark:text-white text-4xl sm:text-5xl lg:text-7xl font-black leading-[1.1] tracking-tight">
+                            Learn Smarter.<br/>
+                            Start <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-emerald-600">From Zero</span>.<br/>
+                            Grow Fast.
+                        </h1>
+<h2 class="text-gray-600 dark:text-gray-300 text-lg font-normal leading-relaxed max-w-xl">
+                            Your personal AI tutor that turns confusion into clarity. We build personalized paths for every learner, adapting to your pace in real-time.
+                        </h2>
+</div>
+<div class="flex flex-wrap gap-4 mt-2">
+<button class="flex items-center justify-center rounded-full h-14 px-10 bg-primary hover:bg-primary-dark text-white text-base font-bold transition-all shadow-xl shadow-primary/20 hover:-translate-y-1">
+                            Start Learning
+                        </button>
+<button class="flex items-center justify-center rounded-full h-14 px-10 bg-white border border-gray-200 hover:bg-gray-50 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700 text-charcoal dark:text-white text-base font-bold transition-all shadow-sm">
+                            Explore Courses
+                        </button>
+</div>
+<div class="flex items-center gap-2 text-sm text-gray-500 dark:text-gray-400 mt-2">
+<span class="material-symbols-outlined text-primary text-lg">check_circle</span>
+<span>Free for students • No credit card required</span>
+</div>
+</div>
+<div class="w-full lg:w-1/2">
+<div class="relative w-full aspect-square max-w-[500px] mx-auto">
+<div class="absolute -top-10 -right-10 w-40 h-40 bg-primary/20 rounded-full blur-3xl"></div>
+<div class="absolute -bottom-10 -left-10 w-40 h-40 bg-emerald-500/10 rounded-full blur-3xl"></div>
+<div class="relative z-10 w-full h-full rounded-3xl overflow-hidden shadow-[0_32px_64px_-16px_rgba(32,201,151,0.15)] bg-gray-200 dark:bg-gray-800 ring-8 ring-white dark:ring-gray-800/50">
+<div class="absolute inset-0 bg-gradient-to-tr from-primary/10 to-emerald-500/10 mix-blend-overlay z-10"></div>
+<div class="w-full h-full bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDv3veTuRFuaBodxuFc6xsl2GUD0egRXwK_rS03PYeqSjt7c-mAsBvv9c_LiFFoIM2DMoGlgMS-HasPtwm9sUL30X3D7hGrLq8kXqzmYWi1t_8G42iXfiy-aUenN2eYNfZeHfMJoKZpVNOrp1dpfMCjXpVPdq6e0_Xx2Wkj5yry10NBNYe6r-xAP0gi2t_Ms4wnIz324jGdJiojFt1FWt5GM9k5Zk5YuDUFLOrK1fEWAtYuYnDVS77KtedJz42YQdjM0y7N70PUh0Y");'></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="py-16 lg:py-24 bg-white dark:bg-gray-900/50">
+<div class="max-w-7xl mx-auto px-6 lg:px-10">
+<div class="flex flex-col gap-12">
+<div class="flex flex-col gap-4 text-center items-center">
+<span class="text-primary font-bold tracking-wider uppercase text-sm">Features</span>
+<h2 class="text-charcoal dark:text-white text-3xl lg:text-4xl font-bold leading-tight max-w-2xl">
+                        Everything you need to master new skills
+                    </h2>
+<p class="text-gray-600 dark:text-gray-400 text-base max-w-2xl">
+                        From personalized roadmaps to instant AI assistance, we provide the tools to accelerate your growth.
+                    </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+<div class="flex flex-col gap-4 rounded-3xl border border-gray-100 dark:border-gray-800 bg-white dark:bg-gray-800 p-8 hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 group">
+<div class="size-14 rounded-2xl bg-primary/10 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all duration-300 shadow-sm">
+<span class="material-symbols-outlined text-3xl">map</span>
+</div>
+<div class="flex flex-col gap-2">
+<h3 class="text-charcoal dark:text-white text-lg font-bold">AI Personalized Paths</h3>
+<p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
+                                Curriculum that adapts dynamically to your pace, goals, and learning style.
+                            </p>
+</div>
+</div>
+<div class="flex flex-col gap-4 rounded-3xl border border-gray-100 dark:border-gray-800 bg-white dark:bg-gray-800 p-8 hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 group">
+<div class="size-14 rounded-2xl bg-primary/10 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all duration-300 shadow-sm">
+<span class="material-symbols-outlined text-3xl">smart_toy</span>
+</div>
+<div class="flex flex-col gap-2">
+<h3 class="text-charcoal dark:text-white text-lg font-bold">ChatGPT Tutor</h3>
+<p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
+                                Get 24/7 answers to your specific coding or theory questions instantly.
+                            </p>
+</div>
+</div>
+<div class="flex flex-col gap-4 rounded-3xl border border-gray-100 dark:border-gray-800 bg-white dark:bg-gray-800 p-8 hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 group">
+<div class="size-14 rounded-2xl bg-primary/10 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all duration-300 shadow-sm">
+<span class="material-symbols-outlined text-3xl">video_library</span>
+</div>
+<div class="flex flex-col gap-2">
+<h3 class="text-charcoal dark:text-white text-lg font-bold">YouTube Integration</h3>
+<p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
+                                Curated high-quality video lessons, summarized and made interactive for you.
+                            </p>
+</div>
+</div>
+<div class="flex flex-col gap-4 rounded-3xl border border-gray-100 dark:border-gray-800 bg-white dark:bg-gray-800 p-8 hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 group">
+<div class="size-14 rounded-2xl bg-primary/10 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all duration-300 shadow-sm">
+<span class="material-symbols-outlined text-3xl">groups</span>
+</div>
+<div class="flex flex-col gap-2">
+<h3 class="text-charcoal dark:text-white text-lg font-bold">Global Community</h3>
+<p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
+                                Learn, share, and grow together with ambitious peers from around the world.
+                            </p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="py-24 bg-gray-50 dark:bg-background-dark/50 relative overflow-hidden">
+<div class="max-w-7xl mx-auto px-6 lg:px-10 relative z-10">
+<div class="text-center mb-20 flex flex-col items-center">
+<span class="px-4 py-1.5 rounded-full bg-primary/10 text-primary-dark text-xs font-bold uppercase tracking-wider mb-4">The Process</span>
+<h2 class="text-charcoal dark:text-white text-4xl lg:text-5xl font-black leading-tight mb-6">How It Works</h2>
+<p class="text-gray-600 dark:text-gray-400 text-lg max-w-2xl">A frictionless journey from zero to mastery, powered by advanced AI algorithms.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 relative">
+<div class="hidden lg:block absolute top-[120px] left-0 w-full h-0.5 bg-gradient-to-r from-transparent via-primary/20 to-transparent -z-10"></div>
+<div class="step-card group relative">
+<div class="absolute -top-4 right-8 text-6xl font-black text-primary/5 group-hover:text-primary/10 transition-colors">01</div>
+<div class="step-icon-container group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-3xl">flag</span>
+</div>
+<h3 class="text-xl font-bold text-charcoal dark:text-white mb-3">Set Your Goal</h3>
+<p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">Tell us what you want to learn. From coding to creative writing, we build the foundations.</p>
+<div class="mt-4 h-1 w-0 bg-primary group-hover:w-full transition-all duration-500 rounded-full"></div>
+</div>
+<div class="step-card group relative">
+<div class="absolute -top-4 right-8 text-6xl font-black text-primary/5 group-hover:text-primary/10 transition-colors">02</div>
+<div class="step-icon-container group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-3xl">route</span>
+</div>
+<h3 class="text-xl font-bold text-charcoal dark:text-white mb-3">Get A Roadmap</h3>
+<p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">Our AI generates a step-by-step curriculum tailored exactly to your current skill level.</p>
+<div class="mt-4 h-1 w-0 bg-primary group-hover:w-full transition-all duration-500 rounded-full"></div>
+</div>
+<div class="step-card group relative">
+<div class="absolute -top-4 right-8 text-6xl font-black text-primary/5 group-hover:text-primary/10 transition-colors">03</div>
+<div class="step-icon-container group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-3xl">psychology</span>
+</div>
+<h3 class="text-xl font-bold text-charcoal dark:text-white mb-3">Learn with AI</h3>
+<p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">Dive into interactive lessons. Stuck? The AI Tutor explains concepts like a personal mentor.</p>
+<div class="mt-4 h-1 w-0 bg-primary group-hover:w-full transition-all duration-500 rounded-full"></div>
+</div>
+<div class="step-card group relative">
+<div class="absolute -top-4 right-8 text-6xl font-black text-primary/5 group-hover:text-primary/10 transition-colors">04</div>
+<div class="step-icon-container group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-3xl">bar_chart</span>
+</div>
+<h3 class="text-xl font-bold text-charcoal dark:text-white mb-3">Track Progress</h3>
+<p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">Visualize your growth with dynamic dashboards, skill trees, and real-time proficiency scores.</p>
+<div class="mt-4 h-1 w-0 bg-primary group-hover:w-full transition-all duration-500 rounded-full"></div>
+</div>
+</div>
+<div class="mt-20 flex justify-center">
+<div class="flex flex-col items-center gap-4 p-8 rounded-3xl bg-gradient-to-r from-charcoal to-slate-800 text-white shadow-2xl shadow-charcoal/20 max-w-3xl w-full">
+<div class="flex items-center gap-4">
+<div class="flex -space-x-3 overflow-hidden">
+<img alt="" class="inline-block h-10 w-10 rounded-full ring-2 ring-charcoal" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC3WIRS9CE4XfNkqYItXntwG27zvSg0FPLRlFiKMAzJ33QeNoNpaf5BM3BeF44yHUrcZ5TtJXkKdqbLPBkyttpuDD4SSdU8G5Z_lDgLY6hY_mWXJmrdt3ahnXVnakO8uoTRv_Dv5i_OpEJ_nRY2cqHaQtixh1taN8o2Qaag56-e8YQhV7nr_wiYPI3cnkfp8aIo1ZYPI2JaQHM5OGFhvx4sEJJ60J57lpWHzFtzOor1Ei81epJseWSGNkTsyDLdzBHG_2pOYYJyKiA"/>
+<img alt="" class="inline-block h-10 w-10 rounded-full ring-2 ring-charcoal" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA9K2TgPezXqH_qT7XqjxtqSbtlpx_gBCyPJ_o9T06hOCxu5m-s9Es958iBWtwmriivCj_PqlQ_pYrsU7ozgLOsy_OQrpVOAA6FtzmkF0y2bhkilS7rZ-8Vt4OgFkVMP1VOM2r4V0XyI07IXwdVC0QsgDAb1jiLMxkw3GirjyYlYGG3h81DDgav9iPwf7oJ_mSbV56RnSK-28kg6gn9F0Ddk3ftf6oy_s3_d6tYGb4tDQe9yJxXa3Qw7RPKa4sfSgps_wafdU0AloA"/>
+<img alt="" class="inline-block h-10 w-10 rounded-full ring-2 ring-charcoal" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCbo9YaJGlouzlbPmBMDFRmrmnjd7f2XedZNIgpBRul2CEumkWKwGUilkyuJ_83FlOtYdBbswduIqcmdGapU_0T6gKs14LFaQNxvHWdjOjnEpjYYoegKG0Cf51OrMsqd4yChojrFkS1ntZcZTszJNJ0Tu4TmO4Afm1zz0iP-gF0TgYoKpbDafw98JGKlmcrRjiaaJhzw5beRqYxMO0Uluv39of5F4cymglv31RaPVBQWysagiVyonvJFZBXhQlOGmCcFTogtSZJOiY"/>
+<div class="flex items-center justify-center h-10 w-10 rounded-full ring-2 ring-charcoal bg-primary text-white text-[10px] font-bold">+2k</div>
+</div>
+<p class="text-sm font-semibold">Join 2,000+ students starting their journey today</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="py-16 lg:py-24 bg-white dark:bg-gray-900/30">
+<div class="max-w-7xl mx-auto px-6 lg:px-10">
+<div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
+<div class="w-full lg:w-1/2 order-2 lg:order-1">
+<div class="rounded-3xl overflow-hidden shadow-2xl border border-gray-100 dark:border-gray-800 bg-white dark:bg-gray-800">
+<div class="w-full aspect-video bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBLbkiksH8i5eQVasUxOhgcc5W7gf3K0OIjrKw42ZgVGpxSpm9e3oArEo9MEfZBOrzWVbY9fWLMTjYdJY2tovpF4r5vROJwMRH0wIPCJZ0PcCzM7TmhF-I2alxHOjcFDYr7gV2EpViWmPLtVA-BRYV7RRdTVw0svt7u_oRiIC8IwvBbXtIUygT4gNvRoObNiQqOlvH0nWaT4_fmME6oyEo9hMyyp_Yj6smqL4wNXEJEQwudmyGcxyW7AE8Uc9fVsJiUt7QfZpdtg3w");'>
+</div>
+<div class="p-8">
+<div class="flex items-center gap-4 mb-4">
+<div class="h-3 w-full bg-gray-100 dark:bg-gray-700 rounded-full overflow-hidden">
+<div class="h-full bg-gradient-to-r from-primary to-emerald-500 w-3/4 rounded-full"></div>
+</div>
+<span class="text-sm font-bold text-primary-dark">75% Complete</span>
+</div>
+<div class="flex justify-between items-center text-sm text-gray-500 dark:text-gray-400">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-xs">book</span>
+<span>Module: Advanced UI Design</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-xs">timer</span>
+<span>2h remaining</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="w-full lg:w-1/2 order-1 lg:order-2">
+<h2 class="text-3xl lg:text-4xl font-bold text-charcoal dark:text-white mb-6">Why Choose FromZero?</h2>
+<p class="text-gray-600 dark:text-gray-400 text-lg mb-8 leading-relaxed">
+                        Traditional courses are static. We are dynamic. FromZero evolves with you, ensuring you never waste time on what you already know.
+                    </p>
+<div class="flex flex-col gap-6">
+<div class="flex gap-4">
+<div class="mt-1 bg-primary/10 p-2.5 rounded-xl h-fit text-primary-dark">
+<span class="material-symbols-outlined">bolt</span>
+</div>
+<div>
+<h4 class="text-lg font-bold text-charcoal dark:text-white">Smart Recommendations</h4>
+<p class="text-gray-600 dark:text-gray-400 text-sm">Our algorithms analyze your performance to suggest the next best lesson.</p>
+</div>
+</div>
+<div class="flex gap-4">
+<div class="mt-1 bg-primary/10 p-2.5 rounded-xl h-fit text-primary-dark">
+<span class="material-symbols-outlined">support_agent</span>
+</div>
+<div>
+<h4 class="text-lg font-bold text-charcoal dark:text-white">Real-Time Help</h4>
+<p class="text-gray-600 dark:text-gray-400 text-sm">Never get stuck. Our AI tutor understands context and explains simply.</p>
+</div>
+</div>
+<div class="flex gap-4">
+<div class="mt-1 bg-primary/10 p-2.5 rounded-xl h-fit text-primary-dark">
+<span class="material-symbols-outlined">workspace_premium</span>
+</div>
+<div>
+<h4 class="text-lg font-bold text-charcoal dark:text-white">Industry Standard</h4>
+<p class="text-gray-600 dark:text-gray-400 text-sm">Curriculum based on what top tech companies are actually hiring for.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="py-24 px-6 lg:px-10">
+<div class="max-w-6xl mx-auto w-full bg-gradient-to-br from-charcoal to-slate-900 rounded-[3rem] overflow-hidden relative shadow-2xl">
+<div class="absolute top-0 right-0 -mr-20 -mt-20 size-96 bg-primary/10 rounded-full blur-3xl"></div>
+<div class="absolute bottom-0 left-0 -ml-20 -mb-20 size-80 bg-emerald-500/10 rounded-full blur-3xl"></div>
+<div class="relative z-10 flex flex-col items-center text-center p-12 lg:p-20 gap-8">
+<h2 class="text-4xl lg:text-6xl font-black text-white tracking-tight leading-tight max-w-3xl">
+                    Ready to upgrade your brain?
+                </h2>
+<p class="text-gray-300 text-lg lg:text-xl max-w-2xl font-medium">
+                    Join 50,000+ learners who are mastering new skills faster with FromZero. Start your personalized journey today.
+                </p>
+<div class="flex flex-col sm:flex-row gap-4 w-full justify-center mt-4">
+<button class="bg-primary text-white hover:bg-primary-dark font-bold py-5 px-12 rounded-full text-lg shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-300">
+                        Join FromZero Today
+                    </button>
+<button class="bg-white/10 backdrop-blur-md text-white border border-white/20 hover:bg-white/20 font-bold py-5 px-12 rounded-full text-lg transition-all duration-300">
+                        View Pricing
+                    </button>
+</div>
+<p class="text-gray-400 text-sm font-medium">Free to get started • Cancel anytime • 24/7 Support</p>
+</div>
+</div>
+</section>
+<footer class="bg-white dark:bg-background-dark border-t border-gray-100 dark:border-gray-800 pt-20 pb-10">
+<div class="max-w-7xl mx-auto px-6 lg:px-10">
+<div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-12 mb-16">
+<div class="col-span-2 lg:col-span-2 flex flex-col gap-6">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-4xl font-bold">north_east</span>
+<span class="text-2xl font-bold text-charcoal dark:text-white tracking-tight">FromZero</span>
+</div>
+<p class="text-gray-500 dark:text-gray-400 text-base leading-relaxed max-w-xs">
+                        Empowering self-learners with AI-driven personalized education paths. Grow without limits and master the skills of the future.
+                    </p>
+<div class="flex gap-4">
+<a class="size-10 rounded-full bg-gray-50 dark:bg-gray-800 flex items-center justify-center text-gray-500 hover:text-primary hover:bg-primary/10 transition-all" href="#">
+<svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg>
+</a>
+<a class="size-10 rounded-full bg-gray-50 dark:bg-gray-800 flex items-center justify-center text-gray-500 hover:text-primary hover:bg-primary/10 transition-all" href="#">
+<svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect height="20" rx="5" ry="5" width="20" x="2" y="2"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line></svg>
+</a>
+<a class="size-10 rounded-full bg-gray-50 dark:bg-gray-800 flex items-center justify-center text-gray-500 hover:text-primary hover:bg-primary/10 transition-all" href="#">
+<svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect height="12" width="4" x="2" y="9"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+</a>
+</div>
+</div>
+<div class="flex flex-col gap-6">
+<h4 class="font-bold text-charcoal dark:text-white uppercase text-xs tracking-widest">Platform</h4>
+<div class="flex flex-col gap-4 text-sm font-medium">
+<a class="text-gray-500 dark:text-gray-400 hover:text-primary transition-colors" href="#">Courses</a>
+<a class="text-gray-500 dark:text-gray-400 hover:text-primary transition-colors" href="#">AI Tutor</a>
+<a class="text-gray-500 dark:text-gray-400 hover:text-primary transition-colors" href="#">Pricing</a>
+<a class="text-gray-500 dark:text-gray-400 hover:text-primary transition-colors" href="#">Certificates</a>
+</div>
+</div>
+<div class="flex flex-col gap-6">
+<h4 class="font-bold text-charcoal dark:text-white uppercase text-xs tracking-widest">Resources</h4>
+<div class="flex flex-col gap-4 text-sm font-medium">
+<a class="text-gray-500 dark:text-gray-400 hover:text-primary transition-colors" href="#">Blog</a>
+<a class="text-gray-500 dark:text-gray-400 hover:text-primary transition-colors" href="#">Community</a>
+<a class="text-gray-500 dark:text-gray-400 hover:text-primary transition-colors" href="#">Documentation</a>
+<a class="text-gray-500 dark:text-gray-400 hover:text-primary transition-colors" href="#">Support</a>
+</div>
+</div>
+<div class="flex flex-col gap-6">
+<h4 class="font-bold text-charcoal dark:text-white uppercase text-xs tracking-widest">Company</h4>
+<div class="flex flex-col gap-4 text-sm font-medium">
+<a class="text-gray-500 dark:text-gray-400 hover:text-primary transition-colors" href="#">About Us</a>
+<a class="text-gray-500 dark:text-gray-400 hover:text-primary transition-colors" href="#">Careers</a>
+<a class="text-gray-500 dark:text-gray-400 hover:text-primary transition-colors" href="#">Privacy</a>
+<a class="text-gray-500 dark:text-gray-400 hover:text-primary transition-colors" href="#">Terms</a>
+</div>
+</div>
+</div>
+<div class="flex flex-col md:flex-row justify-between items-center pt-8 border-t border-gray-100 dark:border-gray-800 gap-4">
+<p class="text-sm text-gray-400 font-medium">© 2024 FromZero Inc. All rights reserved.</p>
+<p class="text-sm text-gray-400 font-medium flex items-center gap-1">Made with <span class="text-primary">♥</span> for learners everywhere.</p>
+</div>
+</div>
+</footer>
+</div>
+
+</body></html>
